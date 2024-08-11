@@ -1,77 +1,107 @@
 body {
-  position: relative;
-  background-color: #6495ED;
-  color: #fff;
-}
-
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #000;
-  opacity: 0.7; 
-  z-index: 1;
-}
-
-.content {
-  position: relative;
-  z-index: 2;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    transition: background-color 0.5s ease;
 }
 
 h1 {
-  text-align: center;
-  padding: 50px 0;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #fff;
 }
 
 #form-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 50px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
 }
 
-label {
-  font-size: 20px;
-  margin-bottom: 10px;
+.form-label {
+    font-weight: 500;
 }
 
-input[type="text"] {
-  width: 300px;
-  height: 40px;
-  font-size: 18px;
-  padding: 5px 10px;
-  border-radius: 5px;
-  border: none;
-  outline: none;
+.btn-primary {
+    background-color: #4e73df;
+    border-color: #4e73df;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
 }
 
-button {
-  width: 150px;
-  height: 40px;
-  font-size: 18px;
-  font-weight: bold;
-  color: #fff;
-  background-color: #ff4d4d;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #ff1a1a;
+.btn-primary:hover {
+    background-color: #375a7f;
 }
 
 #result {
-  text-align: center;
-  font-size: 24px;
-  font-weight: bold;
-  margin-top: 30px;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
 }
 
 footer {
-  padding: 10px;
-  text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #fff;
+}
+
+.fa-spinner {
+    font-size: 1.5rem;
+}
+
+.sunny {
+    background: linear-gradient(to right, #FFB75E, #ED8F03);
+}
+
+.cold {
+    background: linear-gradient(to right, #83a4d4, #b6fbff);
+}
+
+.warm {
+    background: linear-gradient(to right, #FFD200, #F7971E);
+}
+
+.hot {
+    background: linear-gradient(to right, #FF4E50, #F9D423);
+}
+
+.sun {
+    width: 100px;
+    height: 100px;
+    background-color: #FFD700;
+    border-radius: 50%;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: spin 10s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg) translate(-50%, -50%); }
+    100% { transform: rotate(360deg) translate(-50%, -50%); }
+}
+
+.snowflake {
+    color: #fff;
+    font-size: 2em;
+    position: absolute;
+    top: 0;
+    animation: snow 5s linear infinite;
+}
+
+@keyframes snow {
+    0% { top: -10%; }
+    100% { top: 100%; }
 }
