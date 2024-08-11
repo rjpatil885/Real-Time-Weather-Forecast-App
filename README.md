@@ -1,4 +1,4 @@
-# European Weather Forecast App
+# Real Time Weather Forecast App
 The European Weather Forecast App is a web application that provides real-time weather information for various countries in Europe. It allows users to search for a specific country and retrieve its temperature
 
 # Features:
